@@ -1,0 +1,48 @@
+.example-viewport {
+  height: 80vh;
+  width: 500px;
+}
+
+.example-items {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px 15px;
+}
+
+.heading {
+  text-align: left;
+  margin: 0px;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+h4 {
+  margin: unset !important;
+  line-height: 22px;
+  font-weight: 400;
+  font-size: 15px;
+}
+span {
+  font-size: 14px;
+}
+
+.avatar {
+  border-radius: 100%;
+  width: 50px;
+  height: 53px;
+  margin-right: 10px;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 55px;
+}
+
+@media only screen and (max-width: 600px) {
+  .example-viewport {
+    height: 80vh;
+    width: 90vw;
+  }
+}

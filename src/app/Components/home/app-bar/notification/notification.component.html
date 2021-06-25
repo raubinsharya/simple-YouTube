@@ -1,0 +1,16 @@
+<p class="heading">Notifications</p>
+<mat-divider></mat-divider>
+<cdk-virtual-scroll-viewport itemSize="20" class="example-viewport">
+  <div *cdkVirtualFor="let folder of items" class="example-items">
+    <img mat-card-avatar class="avatar" [src]="folder.profile" />
+    <div>
+      <h4>
+        Goldmines Telefilms uploaded: Guess the output 37 | Tricky C codes for
+        Beginners. Technical Interview & Gate | GeeksforGeeks
+      </h4>
+      <span>2 Days ago</span>
+    </div>
+    <div style="flex-grow: 1;"></div>
+    <img [src]="folder.thumbnail" class="thumbnail" />
+  </div>
+</cdk-virtual-scroll-viewport>

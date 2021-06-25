@@ -1,0 +1,66 @@
+<mat-nav-list class="dashboard">
+  <a mat-list-item class="item">
+    <mat-icon mat-list-icon>home</mat-icon>
+    <p matLine *ngIf="navService.isOpen">Home</p>
+  </a>
+
+  <a mat-list-item class="item">
+    <mat-icon mat-list-icon>whatshot</mat-icon>
+    <p matLine *ngIf="navService.isOpen">
+      Trending
+    </p>
+  </a>
+  <a mat-list-item class="item">
+    <mat-icon mat-list-icon>subscriptions</mat-icon>
+    <p matLine *ngIf="navService.isOpen">Subscriptions</p>
+  </a>
+
+  <mat-divider *ngIf="navService.isOpen"></mat-divider>
+  <a mat-list-item class="item">
+    <mat-icon mat-list-icon>video_library</mat-icon>
+    <p matLine *ngIf="navService.isOpen">Library</p>
+  </a>
+
+  <div *ngIf="navService.isOpen">
+    <a mat-list-item class="item">
+      <mat-icon mat-list-icon>history</mat-icon>
+      <p matLine>History</p>
+    </a>
+    <a mat-list-item class="item">
+      <mat-icon mat-list-icon>watch_later</mat-icon>
+      <p matLine>Watch Later</p>
+    </a>
+    <a mat-list-item class="item">
+      <mat-icon mat-list-icon>thumb_up</mat-icon>
+      <p matLine>Liked Videos</p>
+    </a>
+
+    <a mat-list-item class="item">
+      <mat-icon mat-list-icon>expand_more</mat-icon>
+      <p matLine>Show more</p>
+    </a>
+    <mat-divider></mat-divider>
+    <p mat-subheader>SUBSCRIPTIONS</p>
+    <a mat-list-item *ngFor="let item of items" class="item">
+      <img mat-list-icon class="avatar" [src]="item.url" />
+      <p matLine>{{ item.name }}</p>
+    </a>
+    <mat-divider></mat-divider>
+    <a mat-list-item class="item">
+      <mat-icon mat-list-icon>settings</mat-icon>
+      <p matLine>Settings</p>
+    </a>
+    <a mat-list-item class="item">
+      <mat-icon mat-list-icon>flag</mat-icon>
+      <p matLine>Report history</p>
+    </a>
+    <a mat-list-item class="item">
+      <mat-icon mat-list-icon>help</mat-icon>
+      <p matLine>Help</p>
+    </a>
+    <a mat-list-item class="item">
+      <mat-icon mat-list-icon>feedback</mat-icon>
+      <p matLine>Send feedback</p>
+    </a>
+  </div>
+</mat-nav-list>

@@ -1,0 +1,68 @@
+<div class="example-button-row">
+  <button mat-button>Basic</button>
+  <button mat-button color="primary">Primary</button>
+  <button mat-button color="accent">Accent</button>
+  <button mat-button color="warn">Warn</button>
+  <button mat-button disabled>Disabled</button>
+  <a mat-button routerLink=".">Link</a>
+</div>
+
+<div class="example-button-row">
+  <button mat-flat-button>Basic</button>
+  <button mat-flat-button color="primary">Primary</button>
+  <button mat-flat-button color="accent">Accent</button>
+  <button mat-flat-button color="warn">Warn</button>
+  <button mat-flat-button disabled>Disabled</button>
+  <a mat-flat-button routerLink=".">Link</a>
+</div>
+
+<div class="mat-display-1">This is h1</div>
+
+<div class="mat-headline">This is some text</div>
+<div class="mat-title">This is some text</div>
+<div class="mat-subheading-1">This is some text</div>
+<div class="mat-subheading-2">This is some text</div>
+
+<div class="mat-body-1">This is some text</div>
+<div class="mat-body-2">This is some text</div>
+<div class="mat-caption">This is some text</div>
+
+<button mat-flat-button color="warn">hey there</button>
+<button mat-flat-button color="primary">hey there</button>
+<button mat-flat-button color="accent">hey there</button>
+<button mat-mini-fab>hey there</button>
+<button mat-fab>hey there</button>
+
+<mat-button-toggle-group #group="matButtonToggleGroup">
+  <mat-button-toggle value="left" aria-label="Text align left">
+    <mat-icon color="warn">format_align_left</mat-icon>
+  </mat-button-toggle>
+  <mat-button-toggle value="center" aria-label="Text align center">
+    <mat-icon>format_align_center</mat-icon>
+  </mat-button-toggle>
+  <mat-button-toggle value="right" aria-label="Text align right">
+    <mat-icon>format_align_right</mat-icon>
+  </mat-button-toggle>
+  <mat-button-toggle value="justify" disabled aria-label="Text align justify">
+    <mat-icon>format_align_justify</mat-icon>
+  </mat-button-toggle>
+</mat-button-toggle-group>
+<div class="example-selected-value">Selected value: {{ group.value }}</div>
+
+<span matBadge="6" matBadgePosition="top after">Notification</span>
+<br />
+<span matBadge="6" matBadgePosition="top after" matBadgeColor="warn"
+  >Notification</span
+>
+<br />
+<span matBadge="6" matBadgePosition="top after" matBadgeOverlap="false"
+  >Notification</span
+>
+<br />
+<span
+  matBadgePosition="top after"
+  matBadgeOverlap="false"
+  [matBadge]="notification"
+  [matBadgeHidden]="notification === 0"
+  >Notification</span
+>

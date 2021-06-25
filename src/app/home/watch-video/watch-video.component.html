@@ -1,0 +1,262 @@
+<div class="containers">
+  <div class="row mt-4">
+    <div class="col-lg-8 col-md-6 col-sm-12">
+      <div class="video">
+        <vg-player (onPlayerReady)="onPlayerReady($event)">
+          <vg-overlay-play></vg-overlay-play>
+          <vg-buffering></vg-buffering>
+
+          <vg-scrub-bar
+            [vgSlider]="true"
+            style="background-color: rgba(245, 245, 245, 0.034); height: 3px;"
+          >
+            <vg-scrub-bar-current-time
+              [vgSlider]="true"
+              class="progress-bar"
+            ></vg-scrub-bar-current-time>
+            <vg-scrub-bar-buffering-time
+              class="buffer-bar"
+            ></vg-scrub-bar-buffering-time>
+          </vg-scrub-bar>
+
+          <vg-controls
+            [vgAutohide]="false"
+            [vgAutohideTime]="1"~
+            style="
+              background-color: transparent;
+              font-size: 13px;
+              font-family: roboto;
+              font-weight: 400;
+            "
+          >
+            <vg-play-pause></vg-play-pause>
+            <vg-mute class="volume"></vg-mute>
+            <vg-volume class="volume-slider"></vg-volume>
+            <vg-time-display
+              vgProperty="current"
+              vgFormat="mm:ss"
+            ></vg-time-display>
+            <span style="color: white; margin-top: 15px;">/</span>
+            <vg-time-display
+              vgProperty="total"
+              vgFormat="mm:ss"
+            ></vg-time-display>
+
+            <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+
+            <vg-playback-button></vg-playback-button>
+            <vg-track-selector></vg-track-selector>
+            <!-- <vg-quality-selector> </vg-quality-selector> -->
+            <vg-fullscreen></vg-fullscreen>
+          </vg-controls>
+
+          <video
+            [vgMedia]="media"
+            #media
+            id="singleVideo"
+            preload="auto"
+            crossorigin
+            autoplay
+          >
+            <source
+              src="http://static.videogular.com/assets/videos/videogular.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="http://static.videogular.com/assets/videos/videogular.ogg"
+              type="video/ogg"
+            />
+            <source
+              src="http://static.videogular.com/assets/videos/videogular.webm"
+              type="video/webm"
+            />
+
+            <track
+              kind="subtitles"
+              label="English"
+              src="http://static.videogular.com/assets/subs/pale-blue-dot.vtt"
+              srclang="en"
+              default
+            />
+            <track
+              kind="subtitles"
+              label="Español"
+              src="http://static.videogular.com/assets/subs/pale-blue-dot-es.vtt"
+              srclang="es"
+            />
+          </video>
+        </vg-player>
+      </div>
+      <div class="bottom">
+        <p class="tag">#Programming #Language</p>
+        <p class="title">
+          How to Build a NETFLIX Clone with REACT JS for Beginners (in 3 Hours!)
+        </p>
+        <div class="d-flex">
+          <p class="views">1,269,870 views• 13 Dec 2019</p>
+          <div style="flex-grow: 1;"></div>
+          <div class="like-dislike">
+            <button mat-icon-button>
+              <mat-icon>thumb_up</mat-icon>
+            </button>
+            <span>156K</span>
+            <button mat-icon-button>
+              <mat-icon>thumb_down</mat-icon>
+            </button>
+            <span>56K</span>
+          </div>
+          <button mat-icon-button>
+            <mat-icon>share</mat-icon>
+          </button>
+          <span class="share">SHARE</span>
+          <button mat-icon-button>
+            <mat-icon>playlist_add</mat-icon>
+          </button>
+          <span class="share">SAVE</span>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="mt-3">
+          <div class="d-flex">
+            <img
+              class="avatar"
+              src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
+              alt=""
+            />
+            <div id="channel" style="display: flex; flex-direction: column;">
+              <span>Clever Programmer</span>
+              <p>563K subscribers</p>
+            </div>
+            <div style="flex-grow: 1;"></div>
+            <button class="subscribe" mat-flat-button color="warn">
+              SUBSCRIBE
+            </button>
+          </div>
+          <div class="description">
+            Join the epic masterclass that shows you how to become a 6-figure
+            developer... <br />
+            <a href="#">https://cleverprogrammer.com</a>
+            <p class="description-text">
+              It's that time of the year where I make a video on the top 5 best
+              programming languages to learn in 2020 ❤️. I got some juicy
+              information for you in this one. <br /><br />
+              We talk about programming languages like Java, JavaScript, Python,
+              Swift, and SQL. I give you a rundown of what is the main reason
+              behind using each of the programming languages as well.
+              <br /><br />
+              For example, which one should you use for the frontend or backend
+              or full-stack? Which programming language is the best for database
+              management? Which programming language is the best for data
+              science, machine learning, or general-purpose scripting?
+              <br /><br />
+              This video got you covered. Sit back, grab some popcorn, and enjoy
+              yourself. You're in for an epic ride.
+            </p>
+            <span class="show-less">SHOW LESS</span>
+          </div>
+          <mat-divider class="comment-divider"></mat-divider>
+          <span>2,794 Comments</span>
+          <button mat-button class="sort-btn">
+            <mat-icon>sort</mat-icon>
+            <span> SORT BY</span>
+          </button>
+        </div>
+        <div class="mt-3 d-flex">
+          <img
+            class="avatar-sm"
+            src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
+            alt=""
+          />
+          <form class="w-100">
+            <mat-form-field
+              class="w-100 ml-3"
+              style="font-size: 13px; color: black;"
+              floatLabel="never"
+            >
+              <mat-label>Add a public commnet...</mat-label>
+              <input matInput />
+            </mat-form-field>
+            <div class="comment-btn-group" *ngIf="true">
+              <button mat-flat-button class="submit">CANCEL</button>
+              <button mat-flat-button color="primary" class="submit ml-1">
+                COMMENT
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="mt-4 d-flex">
+          <img
+            class="avatar-sm"
+            src="https://yt3.ggpht.com/a/AATXAJyHpxFEtiM21j9JcrwZBKRN5hQtjG7XW2G0ExTsyw=s48-c-k-c0xffffffff-no-rj-mo"
+            alt=""
+          />
+          <div class="d-flex flex-column">
+            <button mat-icon-button disableRipple="true" class="pin ml-3">
+              <mat-icon>push_pin</mat-icon>
+              Pinned By Flying Beast
+            </button>
+            <div class="d-flex chip">
+              <span>
+                Flying Beast
+                <mat-icon>done</mat-icon>
+              </span>
+              <p>10 hours ago</p>
+            </div>
+            <p class="pin-comment">
+              do vote for your fav creator here..<a href=""
+                >http://www.exhibit.tech/influencex20
+              </a>
+              bhai is nominated in the Health and fitness category. you need to
+              create an account, can only vote once a day.
+            </p>
+            <div class="d-flex mt-1 comment-like">
+              <button mat-icon-button>
+                <mat-icon>thumb_up</mat-icon>
+              </button>
+              <p>730</p>
+              <button mat-icon-button>
+                <mat-icon>thumb_down</mat-icon>
+              </button>
+              <p>50</p>
+              <span>REPLY</span>
+            </div>
+            <button mat-button class="view-replies-btn" disableRipple="true">
+              <mat-icon>arrow_drop_down</mat-icon>
+              View 213 replies
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 d-flex">
+        <img
+          class="avatar-sm"
+          src="https://yt3.ggpht.com/a/AATXAJyHpxFEtiM21j9JcrwZBKRN5hQtjG7XW2G0ExTsyw=s48-c-k-c0xffffffff-no-rj-mo"
+          alt=""
+        />
+        <div class="d-flex flex-column">
+          <p class="name"><strong>Raubinsh Arya</strong> 1 day ago</p>
+          <p class="pin-comment">
+            Bhai ka video is awesome, better than bollywood movie !
+          </p>
+          <div class="d-flex mt-1 comment-like">
+            <button mat-icon-button>
+              <mat-icon>thumb_up</mat-icon>
+            </button>
+            <p>730</p>
+            <button mat-icon-button>
+              <mat-icon>thumb_down</mat-icon>
+            </button>
+            <p>50</p>
+            <span>REPLY</span>
+          </div>
+          <button mat-button class="view-replies-btn" disableRipple="true">
+            <mat-icon>arrow_drop_down</mat-icon>
+            View 21 replies
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 side">
+      <app-watch-video-right-side></app-watch-video-right-side>
+    </div>
+  </div>
+</div>

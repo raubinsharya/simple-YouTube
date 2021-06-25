@@ -1,0 +1,41 @@
+<div class="row no-gutters">
+  <div class="col-12">
+    <p class="recommended">Recommended</p>
+  </div>
+
+  <div
+    class="card col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 justify-content-left d-flex"
+    style="margin-bottom: 10px; cursor: pointer;"
+    *ngFor="let row of rows"
+  >
+    <div>
+      <div class="img-container">
+        <img
+          class="card-image"
+          src="{{ row.thumbnail }}"
+          alt="YouTube thumbnail"
+        />
+        <p class="time">{{ row.time }}</p>
+        <mat-icon class="watch-later">watch_later</mat-icon>
+        <div class="later-div">WATCH LATER</div>
+        <mat-icon class="add-playlist">playlist_play</mat-icon>
+        <div class="playlist-queue">ADD TO QUEUE</div>
+      </div>
+      <div class="card-content">
+        <div class="d-flex mt-2">
+          <img class="avatar" src="{{ row.profile }}" />
+          <p class="text">
+            {{ row.text | slice: 0:70 }}
+          </p>
+          <div style="flex-grow: 1;"></div>
+          <mat-icon class="more-icon">more_vert</mat-icon>
+        </div>
+        <p class="title">
+          {{ row.channel }}
+          <mat-icon class="check">check</mat-icon>
+        </p>
+        <p class="sub-title">{{ row.views }} views {{ row.old }} ago</p>
+      </div>
+    </div>
+  </div>
+</div>
